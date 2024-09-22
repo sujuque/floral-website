@@ -1,0 +1,919 @@
+.everyWrapper {
+  max-width: 100%;
+  margin: 0 auto; /* Centers the content */
+  padding: 20px;
+  background-color: #fff;
+}
+
+.headerWrap {
+  width: 90.2%;
+  left: 5.5%;
+  position: sticky;
+  top: 0;
+  padding-top: .75rem;
+  background-color: #fff;
+}
+
+.contentWrap {
+  width: 95%;
+  margin-left: 1.3%;
+  background-color: white;
+  padding-top: 2px;
+}
+
+.homeBigBox {
+  height: 80vh;
+  width: 95%;
+  left: 2.5%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.homeIntroWrapper {
+  display: inline-block;
+  height: 100%;
+  width: 70%;
+  padding-left: .5em;
+}
+
+.homeName, .homeIntroWrapper {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.homeName {
+  width: 100%;
+  height: 20%;
+  border: .13rem solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeIntro {
+  height: 80%;
+  padding-top: .5em;
+  flex-flow: row nowrap;
+}
+
+.homeIntro, .homeIntroStart {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.homeIntroStart {
+  flex: 0 0 5%;
+  height: 100%;
+  border: .13rem solid #000;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.homeIntroStart h3 {
+  transform: rotate(180deg);
+  transform-origin: center;
+  writing-mode: tb-rl;
+  color: #000;
+  font-size: 2em;
+  line-height: 0;
+  font-weight: 500;
+}
+
+.homeIntroStart:hover {
+  background-color: #000000;
+}
+
+.homeIntroStart:hover h3{
+  color: #fff;
+}   
+
+.homeIntroText {
+  position: relative;
+  flex-grow: 2;
+  margin-left: .5em;
+  height: 100%;
+  box-sizing: border-box;
+  border: .13rem solid #000;
+  overflow: hidden;
+}
+
+.homeIntroTextContent{
+  position: relative;
+  margin-left: .5em;
+  height: 100%;
+  overflow: hidden;
+}
+
+.homeLogo {
+ /*display: inline-block;*/
+  height: 100%;
+  width: 29%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: .13rem solid #000;
+}
+
+.homeBigBox, .homeLogo {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.homeLogo img {
+  position: relative;
+  height: auto;
+  width: auto;
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.design {
+  height: 82vh;
+  display: flex; 
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
+  width: 94.3%;
+  left: 3.1%;
+  padding-bottom: 2.6em;
+} 
+
+.designBigBox {
+  flex: 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 0.3em;
+  flex-wrap: nowrap;
+}
+
+.designBox {
+  flex: 2.5; 
+  border: 0.13rem solid #000; 
+  background-color: rgb(255, 255, 255);
+  margin-left: 0.3em;
+  align-items: center;
+  justify-content: center;
+}
+
+#sig-canvas {
+  border: none;
+  max-width: 100%;
+  height: 100%;
+}
+
+.designChoiceBox {
+  flex: 1;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start;
+  align-items: stretch; 
+  border: 0.13rem solid #000; 
+  padding: 0.3em;
+}
+
+.designComposition, 
+.designFlower {
+  flex: 1;
+  border: 0.13rem solid #000;
+  padding: 0.3em; 
+  overflow: auto; 
+  height: 100%;
+  margin-bottom: 0.3em;
+}
+
+.designViewport {
+  flex: 1; 
+  border: 0.13rem solid #000;
+  padding: 0.3em; 
+  overflow: auto; 
+  height: 100%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+}
+
+.designViewport button {
+  background-color: #ffffff;
+  color: black;
+  border: 0.13rem solid #000;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 0.5em 0;
+  width: 100%;
+}
+
+.designViewport button:hover {
+  background-color: #000;
+  color: white;
+}
+
+.designViewport button:active {
+  background-color: #ffffff;
+  color: black;
+  transform: scale(0.98);
+}
+
+.designViewport button:focus {
+  outline: none;
+}
+
+
+.designComposition h3, 
+.designFlower h3{
+  font-size: 1em;
+} 
+
+.designCompositionText, 
+.designFlowerText{
+  padding:0;
+}
+
+.designCompositionOptions, 
+.designFlowerOptions{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.composition, 
+.flower {
+  border: 0.13rem solid #000; 
+  padding: 0.15em;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+} 
+
+.composition h3,
+.flower h3  {
+  color:#fff;
+} 
+
+.composition.active, 
+.flower.active {
+  background-color: #fff; 
+  border: 0.13rem solid #6ad9dd;
+}
+
+.composition.active h3, 
+.flower.active h3 {
+  color: #6ad9dd;
+} 
+
+.composition:hover, 
+.flower:hover {
+  background-color: #fff;
+  border: 0.13rem solid #6ad9dd;
+}
+
+.composition:hover h3, 
+.flower:hover h3 {
+  color: #6ad9dd;
+}
+
+.designViewportBox {
+  border: 0.13rem solid #000;
+  padding: 0.3em;
+  aspect-ratio: 1/0.6;
+} 
+
+.designAdjust {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch; 
+  border: 0.13rem solid #000;
+  box-sizing: border-box;
+  padding: 0.3em;
+}
+
+#bgColorPicker {
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+.designSliderBox {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 0.13rem solid #000;
+  padding: 0.3em;
+  margin-bottom:0.3em;
+}
+
+.designParameterName {
+  font-weight: 500;
+  margin-bottom: 0.3em;
+}
+
+.designParameterSlider {
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: transparent;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.designParameterSlider::-webkit-slider-runnable-track {
+  width: 100%; 
+  height: 0px;
+  background: rgb(255, 255, 255);
+  border: 0.13em solid rgb(0, 0, 0);
+}
+
+.designParameterSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: var(--thumb-size, 10px);
+  height: var(--thumb-size, 10px);
+  background: rgb(0, 0, 0);
+  border: 0.13em solid rgb(0, 0, 0);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+/* Firefox styles */
+.designParameterSlider::-moz-range-track {
+  width: 100%;
+  height: 10px; 
+  background: rgb(255, 255, 255);
+  border: 0.13em solid rgb(0, 0, 0);
+}
+
+.designParameterSlider::-moz-range-thumb {
+  width: var(--thumb-size, 10px); /* Use the CSS variable */
+  height: var(--thumb-size, 10px); /* Use the CSS variable */
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  border: 0.13em solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.gallery {
+  position: relative;
+  width: 94.5%;
+  left: 3.1%;
+  padding-bottom: 2.6em;
+}
+
+.galleryFilterContent {
+  height: auto;
+  width: 100%;
+  padding: .5em;
+  box-sizing: border-box;
+  border: .13rem solid #000;
+  margin-bottom: .5em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+}
+
+.galleryFilterContent .checkContainer {
+  flex-grow: 0;
+  position: relative;
+  padding-left: 1.5em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right: 6vw;
+}
+
+.galleryFilterContent .checkContainer h3 {
+  margin: 0;
+  color: #000;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.galleryFilterContent .checkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  height: 1em;
+  width: 1em;
+  z-index: 2;
+}
+
+.galleryFilterContent .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  margin-left: 0!important;
+  height: 1em;
+  width: 1em;
+  border: .13rem solid #000;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+@media (min-width:900px) {
+  .carousel-cell, .galleryBigBox {
+      justify-content: flex-start;
+  }
+}
+
+@media (min-width:600px) {
+  .carousel-cell, .galleryBigBox {
+      justify-content: space-between;
+  }
+}
+
+.carousel-cell, .galleryBigBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* Default Styles for .carousel-cell and .galleryBigBox with .loadWrapper */
+.carousel-cell .loadWrapper, .galleryBigBox .loadWrapper {
+  position: relative;
+  margin-bottom: .5rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 95vw; /* Height relative to viewport width */
+}
+
+/* Styling for even and odd child elements for larger screens */
+@media (min-width: 1024px) {
+  .carousel-cell .loadWrapper:nth-child(2n+2), 
+  .galleryBigBox .loadWrapper:nth-child(2n+2),
+  .carousel-cell .loadWrapper:nth-child(odd),
+  .galleryBigBox .loadWrapper:nth-child(odd) {
+      margin-left: 0;
+      margin-right: 0;
+  }
+}
+
+/* Responsive styling for smaller screens (600px+) */
+@media (min-width: 600px) {
+  .carousel-cell .loadWrapper:nth-child(odd), 
+  .galleryBigBox .loadWrapper:nth-child(odd) {
+      margin-right: .25rem; /* Right margin for odd elements */
+  }
+  
+  .carousel-cell .loadWrapper, 
+  .galleryBigBox .loadWrapper {
+      width: calc(47.5vw - .55em); /* Size relative to viewport width */
+      height: calc(47.5vw - 1.25em);
+  }
+}
+
+/* Default styles for smaller screens, ensuring responsive design */
+.carousel-cell .loadWrapper, 
+.galleryBigBox .loadWrapper {
+  width: calc(31.666666666666668vw - .55rem); /* Default width */
+  height: calc(31.666666666666668vw - .55rem); /* Default height */
+}
+
+/* Default styling for carousel-cell and galleryBox */
+.carousel-cell .galleryBox, 
+.galleryBigBox .galleryBox {
+  position: relative;
+  width: 100%;
+  height: 95vw; /* Adjust this for responsive heights */
+  box-sizing: border-box;
+  border: 0.13rem solid #000;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.carousel-cell .galleryBox h3, .galleryBigBox .galleryBox h3 {
+  margin: 0;
+  font-size: 1em;
+}
+
+/* Media query for screens with a minimum width of 600px */
+@media (min-width: 600px) {
+  .carousel-cell .galleryBox, 
+  .galleryBigBox .galleryBox {
+      width: calc(47.4vw - 0.5em);
+      height: calc(47.5vw - 1.25em);
+      margin-bottom: 0.5rem; /* Adjusting margin-bottom for smaller screens */
+  }
+}
+
+/* Media query for screens with a minimum width of 1024px */
+@media (min-width: 1024px) {
+  .carousel-cell .galleryBox, 
+  .galleryBigBox .galleryBox {
+      width: calc(31.666666666666668vw - 0.55rem); 
+      height: calc(31.666666666666668vw - 0.55rem);
+  }
+}
+
+/* Media query for screens with a minimum width of 1200px */
+@media (min-width: 1200px) {
+  .carousel-cell .galleryBox, 
+  .galleryBigBox .galleryBox {
+      width: calc(23.75vw - 0.55rem); 
+      height: calc(23.75vw - 0.55rem);
+  }
+}
+
+.carousel-cell .galleryBox .galleryPicture, .galleryBigBox .galleryBox .galleryPicture {
+  position: relative;
+  flex-grow: 2;
+  width: 95%;
+  /* border: .13rem solid #000; */
+  box-sizing: border-box;
+  margin-bottom: .5em;
+  margin-top: .5em;
+  background-image: url(/);
+  background-size: cover;
+  background-position: left 20%;
+}
+
+.carousel-cell .galleryBox .galleryArtistName, .galleryBigBox .galleryBox .galleryArtistName {
+  flex-grow: 0;
+  width: 95%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-bottom: .5em;
+}
+
+.carousel-cell .galleryBox .galleryArtistName h3, .galleryBigBox .galleryBox .galleryArtistName h3 {
+  width: 80%;
+  min-height: 2em;
+  flex-grow: 2;
+  border: .13rem solid #000;
+  box-sizing: border-box;
+  padding: .25em;
+}
+
+.carousel-cell .galleryBox .galleryPatternName, .galleryBigBox .galleryBox .galleryPatternName {
+  flex-grow: 0;
+  width: 95%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+.carousel-cell .galleryBox .galleryPatternName h3, .galleryBigBox .galleryBox .galleryPatternName h3 {
+  width: 100%;
+  min-height: 2em;
+  flex-grow: 0;
+  border: .13rem solid #000;
+  box-sizing: border-box;
+  padding: .25em;
+}
+
+.catalogueBigBox {
+  height: 80vh;
+  width: 95%;
+  left: 2.5%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.catalogueBigBox .catalogueMotifBox {
+  position: relative;
+}
+
+.catalogueMotifBox {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+  padding-left: 0.5em;
+  box-sizing: border-box;
+  overflow-y: auto; /* Enable scrolling if needed */
+}
+
+.catalogueMotifClassName {
+  width: 100%;
+  border: 0.13rem solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 0.5em;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-bottom: 0.5em;
+}
+
+.catalogueMotifClassName h1 {
+  font-size: 2.5em;
+  padding: 0.1em;
+}
+.catalogueMotifGroup {
+  display: none; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto; 
+  box-sizing: border-box;
+  width: 100%; 
+  height: 100%; 
+}
+
+.catalogueMotifGroup.active {
+  display: flex;
+}
+
+.catalogueMotifGroup.active h3 {
+  margin: 0;
+  font-size: 1em;
+}
+
+.catalogueMotifBox .catalogueMotifGroup {
+  box-sizing: border-box;
+}
+
+.motifType {
+  flex: 1 0 calc(33.333% - 1em);
+  margin: 0.5em;
+  border: 0.13rem solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5em;
+  box-sizing: border-box;
+  height: calc((100% - 1em));
+}
+
+.catalogueMotifGroup .motifType:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.catalogueMotifGroup .motifType:nth-child(3n) {
+  margin-right: 0;
+}
+
+.motifType .motifPicture {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: .5em;
+  margin-top: .5em;
+  background-image: url(/);
+  background-size: cover;
+  background-position: left 20%;
+}
+
+.motifType .motifName {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  box-sizing: border-box;
+  padding: 0em;
+  margin-top: auto;
+}
+
+.motifType .motifName h3 {
+  width: 100%;
+  min-height: 2em;
+  flex-grow: 0;
+  border: .13rem solid #000;
+  box-sizing: border-box;
+  padding: .25em;
+}
+
+.catalogueInfoBox {
+  width: 29%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.13rem solid #000;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  right: 0; 
+  overflow-y: auto;
+}
+
+.catalogueBigBox, .catalogueInfoBox {
+  position: relative;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+  /* border-radius: 6px;*/
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+  /*border-radius: 6px;*/
+}
+
+::-webkit-scrollbar-button {
+  display: none; 
+}
+
+/* Basic styles for the body and text */
+/* For small screens */
+/* @media (min-width: 900px) {
+  header {
+      height: 7vh;
+  }
+} */
+
+/*For medium and large screens */
+@media (min-width: 1200px) {
+  header {
+      display: block;
+  }
+}
+
+@media (min-width:900px){
+  header {
+      height: 7vh;
+  }
+}
+
+@media (min-width:600px) {
+  header {
+      height: 7vh;
+  }
+}
+
+@media (min-width:1024px) {
+  header li {
+      background-color: #fff;
+      height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalogueMotifClassName {
+      height: auto;
+  }
+
+  h1 {
+      font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .motifType {
+      flex: 1 0 100%; 
+      margin: 0.5em 0; 
+  }
+
+  .catalogueMotifGroup .motifType:nth-child(3n+1),
+  .catalogueMotifGroup .motifType:nth-child(3n) {
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+  }
+}
+
+header {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+}
+
+/* Navigation styling */
+header ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+header ul .empty-box {
+  flex-grow: 1;
+  background: transparent;
+  border: .13rem solid #000;
+}
+
+header li {
+  flex-grow: 0;
+  position: relative;
+  margin-right: .5em;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: .13rem solid #000;
+}
+
+header li a {
+  position: relative;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  padding-left: .5em;
+  padding-right: .5em;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+header li a h3 {
+  font-weight: 500;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header .active {
+  background-color: #000;
+}
+
+header .active h3 {
+  color: #ffffff;
+}
+
+header ul li a:hover {
+  background-color: #000;
+}
+
+header ul li a:hover h3 {
+  color: #ffffff;
+}
+
+h1 {
+  font-family: "Kanit", sans-serif;
+  font-size: 3.5em;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 500;
+}
+
+body {
+  font-family: "Kanit", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000!important;
+}
+
+input[type="checkbox"] {
+  box-sizing: border-box;
+}
+
+/* Main content styling */
+main {
+  padding: 20px;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed; /* Keep the footer at the bottom of the page */
+  bottom: 0;
+  width: 100%;
+}
