@@ -19,21 +19,24 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+env:
+  VITE_BACKEND_URL: ${{ vars.VITE_BACKEND_URL }}
+  VITE_MEDIA_LINK: ${{ vars.VITE_MEDIA_LINK }}
+  VITE_VIDEO_LINK: ${{ vars.VITE_VIDEO_LINK }}
+  VITE_FACE_DETECTION_LINK: ${{ vars.VITE_FACE_DETECTION_LINK }}
+
 jobs:
   build:
     environment:
       name: github-pages
     runs-on: ubuntu-latest
-    strategy:
-  matrix:
-    node-version: ['18.x', '20.x']
     steps:
-    - name: Checkout
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup npm
+      - name: Setup Npm
         uses: actions/setup-node@v4
-  with:
-    node-version: ${{ matrix.node-version }}
+        with:
+          node-version: "18.15.0"
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Restore cache
@@ -47,7 +50,7 @@ jobs:
             ${{ runner.os }}-build-
       - name: Install dependencies
         run: npm install
-      - name: Build with npm
+      - name: Build with Npm
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
